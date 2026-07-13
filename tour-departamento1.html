@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tour Virtual | Departamento 1</title>
+
+    <link rel="icon" type="image/png" href="fotos/favicon.png">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+
+        body{
+
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f5f5f5;
+
+        }
+
+        h1{
+
+            text-align:center;
+            margin:25px 0;
+            color:#1B5E20;
+
+        }
+
+        .contenedor{
+
+            width:95%;
+            max-width:1200px;
+            margin:auto;
+
+        }
+
+        model-viewer{
+
+            width:100%;
+            height:80vh;
+
+            background:white;
+
+            border-radius:20px;
+
+            box-shadow:0 10px 30px rgba(0,0,0,.20);
+
+        }
+
+        .boton{
+
+            display:inline-block;
+
+            margin:30px auto;
+
+            padding:15px 35px;
+
+            background:#2E7D32;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:50px;
+
+            font-size:18px;
+
+            font-weight:bold;
+
+            transition:.3s;
+
+        }
+
+        .boton:hover{
+
+            background:#1B5E20;
+
+        }
+
+        .centro{
+
+            text-align:center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🥽 Tour Virtual - Departamento 1</h1>
+
+    <div class="contenedor">
+
+        <model-viewer
+
+            src="modelos%203ds/departamento1.glb"
+
+            alt="Departamento 1"
+
+            camera-controls
+
+            auto-rotate
+
+            shadow-intensity="1"
+
+            exposure="1"
+
+            environment-image="neutral"
+
+            loading="eager">
+
+        </model-viewer>
+
+        <div class="centro">
+
+            <a href="departamento1.html" class="boton">
+
+                ← Regresar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

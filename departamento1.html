@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Departamento 1 | Departamentos Cortazar</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+</head>
+
+<body>
+
+    <!--=========================
+            ENCABEZADO
+    ==========================-->
+
+    <header>
+
+        <div class="logo">
+            <h1>🏠 Departamentos Cortazar</h1>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+            <a href="departamentos.html">Departamentos</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!--=========================
+                TÍTULO
+        ==========================-->
+
+        <section class="titulo-departamento">
+
+            <h2>Departamento 1</h2>
+
+            <p>
+                Conoce las instalaciones del departamento mediante la siguiente galería de imágenes.
+            </p>
+
+        </section>
+
+        <!--=========================
+                GALERÍA
+        ==========================-->
+
+        <section class="galeria">
+
+            <a href="fotos/departamento1.JPG" class="glightbox" data-gallery="depto1">
+                <img src="fotos/departamento1.JPG" alt="Sala del departamento">
+            </a>
+
+            <a href="fotos/foto2.JPG" class="glightbox" data-gallery="depto1">
+                <img src="fotos/foto2.JPG" alt="Habitación">
+            </a>
+
+            <a href="fotos/foto3.JPG" class="glightbox" data-gallery="depto1">
+                <img src="fotos/foto3.JPG" alt="Cocina">
+            </a>
+
+            <a href="fotos/foto4.JPG" class="glightbox" data-gallery="depto1">
+                <img src="fotos/foto4.JPG" alt="Baño">
+            </a>
+
+            <a href="fotos/foto5.JPG" class="glightbox" data-gallery="depto1">
+                <img src="fotos/foto5.JPG" alt="Vista general">
+            </a>
+
+        </section>
+
+        <!--=========================
+            DESCRIPCIÓN
+        ==========================-->
+
+        <section class="descripcion">
+
+            <h2>Descripción</h2>
+
+            <p>
+
+                El departamento es compacto y funcional, ideal para una o dos personas.
+                Cuenta con una sala amplia que brinda un ambiente cómodo para descansar,
+                un dormitorio privado y un baño. Es un espacio pensado para ofrecer
+                tranquilidad, comodidad y una estancia agradable.
+
+            </p>
+
+        </section>
+
+        <!--=========================
+            TOUR VIRTUAL
+        ==========================-->
+
+        <section class="tour-virtual">
+
+            <h2>🥽 Tour Virtual</h2>
+
+            <p>
+                Explora el departamento mediante un recorrido 3D interactivo.
+            </p>
+
+            <a href="tour-departamento1.html" class="btn-tour">
+
+                Iniciar Tour Virtual
+
+            </a>
+
+        </section>
+
+        <!--=========================
+            BOTÓN REGRESAR
+        ==========================-->
+
+        <section class="volver">
+
+            <a href="departamentos.html" class="btn-volver">
+
+                ← Regresar a Departamentos
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <!--=========================
+            PIE DE PÁGINA
+    ==========================-->
+
+    <footer>
+
+        <p>
+
+            &copy; 2026 Departamentos Cortazar | Todos los derechos reservados.
+
+        </p>
+
+    </footer>
+
+    <!--=========================
+            GLIGHTBOX
+    ==========================-->
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+
+        const lightbox = GLightbox({
+
+            selector: ".glightbox",
+
+            touchNavigation: true,
+
+            loop: true,
+
+            zoomable: true,
+
+            draggable: true,
+
+            openEffect: "zoom",
+
+            closeEffect: "fade",
+
+            slideEffect: "slide"
+
+        });
+
+    </script>
+
+</body>
+
+</html>
