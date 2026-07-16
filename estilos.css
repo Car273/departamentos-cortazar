@@ -1183,3 +1183,35 @@ section{
     filter:brightness(100%);
 
 }
+
+/*=========================
+    ESTADO DISPONIBLE
+=========================*/
+
+.estado-disponible-pagina{
+
+    display:inline-block;
+
+    margin:20px auto;
+
+    padding:10px 20px;
+
+    background:#E8F5E9;
+
+    color:#1B5E20;
+
+    border:2px solid #2E7D32;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+.titulo-departamento{
+
+    text-align:center;
+
+}
