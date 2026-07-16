@@ -1215,3 +1215,115 @@ section{
     text-align:center;
 
 }
+
+/*=========================
+        HERO NUEVO
+=========================*/
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#ffffff);
+
+    color:#1B5E20;
+
+    padding:40px 20px;
+
+}
+
+.hero-contenido{
+
+    max-width:800px;
+
+}
+
+.hero-logo{
+
+    width:170px;
+
+    margin-bottom:25px;
+
+    animation:flotar 3s ease-in-out infinite;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+    color:#1B5E20;
+
+    margin-bottom:10px;
+
+}
+
+.hero h2{
+
+    font-size:30px;
+
+    color:#2E7D32;
+
+    margin-bottom:20px;
+
+    font-weight:400;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-botones{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-top;
+
+    flex-wrap:wrap;
+
+}
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
