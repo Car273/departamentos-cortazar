@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,7 +9,6 @@
     <title>Tour Virtual | Departamento 1</title>
 
     <link rel="icon" type="image/png" href="fotos/favicon.png">
-
     <link rel="stylesheet" href="estilos.css">
 
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -19,23 +19,45 @@
 
             margin:0;
             font-family:Arial, Helvetica, sans-serif;
-            background:#f5f5f5;
-
-        }
-
-        h1{
-
-            text-align:center;
-            margin:25px 0;
-            color:#1B5E20;
+            background:linear-gradient(to bottom,#ffffff,#f3f8f3);
 
         }
 
         .contenedor{
 
             width:95%;
-            max-width:1200px;
+            max-width:1300px;
             margin:auto;
+            padding:30px 0;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#1B5E20;
+            margin-bottom:10px;
+            font-size:40px;
+
+        }
+
+        .subtitulo{
+
+            text-align:center;
+            color:#666;
+            font-size:18px;
+            margin-bottom:30px;
+
+        }
+
+        .info{
+
+            background:white;
+            border-radius:15px;
+            padding:18px;
+            margin-bottom:25px;
+            box-shadow:0 5px 15px rgba(0,0,0,.10);
+            text-align:center;
 
         }
 
@@ -48,15 +70,27 @@
 
             border-radius:20px;
 
-            box-shadow:0 10px 30px rgba(0,0,0,.20);
+            box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+        }
+
+        .botones{
+
+            margin-top:35px;
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:25px;
+
+            flex-wrap:wrap;
 
         }
 
         .boton{
 
             display:inline-block;
-
-            margin:30px auto;
 
             padding:15px 35px;
 
@@ -79,12 +113,7 @@
         .boton:hover{
 
             background:#1B5E20;
-
-        }
-
-        .centro{
-
-            text-align:center;
+            transform:translateY(-3px);
 
         }
 
@@ -94,41 +123,73 @@
 
 <body>
 
-    <h1>🥽 Tour Virtual - Departamento 1</h1>
+<div class="contenedor">
 
-    <div class="contenedor">
+    <h1>🥽 Tour Virtual</h1>
 
-        <model-viewer
+    <p class="subtitulo">
 
-            src="modelos%203ds/departamento1.glb"
+        Departamento 1
 
-            alt="Departamento 1"
+    </p>
 
-            camera-controls
+    <div class="info">
 
-            auto-rotate
+        <strong>¿Cómo recorrer el departamento?</strong>
 
-            shadow-intensity="1"
+        <br><br>
 
-            exposure="1"
+        🖱 Mantén presionado el clic izquierdo para girar el modelo.
 
-            environment-image="neutral"
+        <br>
 
-            loading="eager">
+        🔍 Usa la rueda del mouse para acercar o alejar.
 
-        </model-viewer>
+        <br>
 
-        <div class="centro">
-
-            <a href="departamento1.html" class="boton">
-
-                ← Regresar
-
-            </a>
-
-        </div>
+        📱 En celulares puedes moverlo con los dedos.
 
     </div>
+
+    <model-viewer
+
+        src="modelos 3ds/departamento1.glb"
+
+        alt="Departamento 1"
+
+        camera-controls
+
+        auto-rotate
+
+        shadow-intensity="1.2"
+
+        exposure="1.1"
+
+        environment-image="neutral"
+
+        loading="eager"
+
+        ar>
+
+    </model-viewer>
+
+    <div class="botones">
+
+        <a href="departamento1.html" class="boton">
+
+            ← Regresar
+
+        </a>
+
+        <a href="contacto.html" class="boton">
+
+            📞 Contactar
+
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 
