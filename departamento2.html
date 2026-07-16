@@ -2,14 +2,13 @@
 <html lang="es">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Departamento 2 | Departamentos Cortazar</title>
 
     <link rel="icon" type="image/png" href="fotos/favicon.png">
-
     <link rel="stylesheet" href="estilos.css">
 
     <!-- GLightbox -->
@@ -30,12 +29,10 @@
         </div>
 
         <nav>
-
             <a href="index.html">Inicio</a>
             <a href="departamentos.html">Departamentos</a>
             <a href="ubicacion.html">Ubicación</a>
             <a href="contacto.html">Contacto</a>
-
         </nav>
 
     </header>
@@ -121,9 +118,7 @@
             </p>
 
             <a href="tour-departamento2.html" class="btn-tour">
-
                 Iniciar Tour Virtual
-
             </a>
 
         </section>
@@ -135,14 +130,48 @@
         <section class="volver">
 
             <a href="departamentos.html" class="btn-volver">
-
                 ← Regresar a Departamentos
-
             </a>
 
         </section>
 
     </main>
+
+    <!--=========================
+      AVISO DEPARTAMENTO RENTADO
+    ==========================-->
+
+    <div id="modalRentado" class="modal-rentado">
+
+        <div class="modal-contenido">
+
+            <h2>🔴 Departamento actualmente rentado</h2>
+
+            <p>
+
+                Este departamento ya se encuentra <strong>rentado</strong> y por el momento no está disponible.
+
+                <br><br>
+
+                Puedes recorrer la galería de imágenes y el tour virtual para conocer sus características.
+
+            </p>
+
+            <div class="modal-botones">
+
+                <button onclick=" " class="btn-modal">
+                     Ver fotos y recorrido virtual
+                </button>
+
+                <a href="departamentos.html" class="btn-modal-secundario">
+                     Ver otros departamentos
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <!--=========================
             PIE DE PÁGINA
@@ -184,42 +213,23 @@
 
         });
 
+        /* Cambia a true cuando el departamento vuelva a estar disponible */
+
+        const departamentoDisponible = false;
+
+        if(departamentoDisponible){
+
+            document.getElementById("modalRentado").style.display = "none";
+
+        }
+
+        function cerrarModal(){
+
+            document.getElementById("modalRentado").style.display = "none";
+
+        }
+
     </script>
-<!-- ====== AVISO DE DEPARTAMENTO RENTADO ====== -->
-
-<div id="modalRentado" class="modal-rentado">
-
-    <div class="modal-contenido">
-
-        <h2>🔴 Departamento actualmente rentado</h2>
-
-        <p>
-
-            Este departamento ya se encuentra <strong>rentado</strong> y por el momento
-            no está disponible.
-
-            <br><br>
-
-            Puedes recorrer la galería de imágenes y el tour virtual para conocer
-            sus características.
-
-        </p>
-
-        <div class="modal-botones">
-
-            <button onclick="cerrarModal()" class="btn-modal">
-                 Ver el departamento
-            </button>
-
-            <a href="departamentos.html" class="btn-modal-secundario">
-                Ver otros departamentos
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
 
 </body>
 

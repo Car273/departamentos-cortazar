@@ -407,17 +407,8 @@ footer{
     color: #555;
 }
 
-.contacto-contenedor {
-    display: flex;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
-    align-items: flex-start;
-}
-
 /* Tarjeta de información */
-.info-contacto, .formulario-contacto {
+.formulario-contacto {
     background: white;
     padding: 40px;
     border-radius: 15px;
@@ -431,11 +422,20 @@ footer{
     font-size: 22px;
 }
 
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+.info-item{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:20px 0;
+
+    text-align:center;
+
 }
 
 .icono-contacto {
@@ -502,10 +502,10 @@ footer{
 
 /* Adaptación responsiva adicional */
 @media (max-width: 768px) {
-    .contacto-contenedor {
+    
         flex-direction: column;
     }
-    .info-contacto, .formulario-contacto {
+    .formulario-contacto {
         width: 100%;
         padding: 30px 20px;
     }
@@ -1025,5 +1025,161 @@ text-decoration:none;
 .btn-modal-secundario:hover{
 
 background:#616161;
+
+}
+
+/*=========================
+    ESTADO DEL DEPARTAMENTO
+=========================*/
+
+.card{
+
+    position: relative;
+
+}
+
+.estado{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#c62828;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    z-index:10;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+.no-disponible img{
+
+    filter:brightness(75%);
+
+}
+
+.no-disponible{
+
+    transition:.3s;
+
+}
+
+.no-disponible:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.contacto-contenedor{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    max-width:1000px;
+
+    margin:0 auto;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+.info-contacto{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    max-width:500px;
+
+    width:100%;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+/*=========================
+      ANIMACIÓN GENERAL
+=========================*/
+
+section{
+
+    animation: aparecer .8s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================
+    DEPARTAMENTO DISPONIBLE
+=========================*/
+
+.estado-disponible{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    z-index:10;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+.disponible img{
+
+    filter:brightness(100%);
 
 }
