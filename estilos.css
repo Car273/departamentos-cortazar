@@ -502,12 +502,11 @@ footer{
 
 /* Adaptación responsiva adicional */
 @media (max-width: 768px) {
-    
-        flex-direction: column;
-    }
+
     .formulario-contacto {
         width: 100%;
         padding: 30px 20px;
+         flex-direction:column;
     }
 }
 
@@ -1232,11 +1231,11 @@ section{
 
     text-align:center;
 
-    background:#ffffff);
+    background:#ffffff;
 
     color:#1B5E20;
 
-    padding:40px 20px;
+    padding:40px, 20px;
 
 }
 
@@ -1300,7 +1299,7 @@ section{
 
     gap:40px;
 
-    margin-top;
+    margin-top:20px;
 
     flex-wrap:wrap;
 
@@ -1477,5 +1476,51 @@ model-viewer{
         min-height:400px;
 
     }
+
+}
+
+.estado-construccion{
+
+    display:inline-block;
+
+    background:#FFC107;
+
+    color:#333;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+}
+
+.btn-construccion{
+
+    display:inline-block;
+
+    background:#FF9800;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-construccion:hover{
+
+    background:#F57C00;
+
+    transform:translateY(-2px);
 
 }
