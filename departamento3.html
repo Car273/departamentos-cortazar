@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Departamento 3 | Departamentos Cortazar</title>
+
+    <link rel="icon" type="image/png" href="fotos/favicon.png">
+    <link rel="stylesheet" href="estilos.css">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+
+        body{
+
+            background:#f5f5f5;
+            font-family:Arial, Helvetica, sans-serif;
+
+        }
+
+        .construccion{
+
+            max-width:1000px;
+            margin:50px auto;
+            padding:40px;
+            background:white;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+            text-align:center;
+
+        }
+
+        .construccion h2{
+
+            color:#ff9800;
+            font-size:40px;
+
+        }
+
+        .construccion p{
+
+            font-size:20px;
+            color:#555;
+
+        }
+
+        model-viewer{
+
+            width:100%;
+            max-width:500px;
+            height:450px;
+            margin:30px auto;
+
+        }
+
+        #mensaje{
+
+            font-size:22px;
+            font-weight:bold;
+            color:#2E7D32;
+            margin-top:20px;
+
+        }
+
+        .barra{
+
+            width:80%;
+            height:25px;
+            margin:25px auto;
+            background:#ddd;
+            border-radius:50px;
+            overflow:hidden;
+
+        }
+
+        .progreso{
+
+            height:100%;
+            width:90%;
+            background:#4CAF50;
+            animation:carga 4s infinite;
+
+        }
+
+        @keyframes carga{
+
+            0%{width:10%;}
+            40%{width:55%;}
+            70%{width:87%;}
+            100%{width:95%;}
+
+        }
+
+        .btn-regresar{
+
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 35px;
+            background:#2E7D32;
+            color:white;
+            text-decoration:none;
+            border-radius:50px;
+            font-size:18px;
+            font-weight:bold;
+
+        }
+
+        .btn-regresar:hover{
+
+            background:#1B5E20;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>🏠 Departamentos Cortazar</h1>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+        <a href="departamentos.html">Departamentos</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="contacto.html">Contacto</a>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section class="construccion">
+
+    <h2>🚧 Departamento 3</h2>
+
+    <p>
+
+        Este departamento todavía se encuentra en construcción.
+
+        <br><br>
+
+        Mientras tanto, nuestro ingeniero está supervisando la obra...
+
+    </p>
+
+    <model-viewer
+
+        src="modelos 3ds/el palomas xd.glb"
+
+        camera-controls
+
+        auto-rotate
+
+        disable-zoom
+
+        shadow-intensity="1"
+
+        exposure="1"
+
+        interaction-prompt="none">
+
+    </model-viewer>
+
+    <div id="mensaje">
+
+        🐦 La paloma está revisando los planos...
+
+    </div>
+
+    <div class="barra">
+
+        <div class="progreso"></div>
+
+    </div>
+
+    <a href="departamentos.html" class="btn-regresar">
+
+        ← Regresar
+
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+
+        &copy; 2026 Departamentos Cortazar | Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+<script>
+
+const mensajes = [
+
+"🐦 La paloma está revisando los planos...",
+
+"👷 Buscando a los albañiles...",
+
+"🧱 Llegando los materiales...",
+
+"☕ Los albañiles fueron por los tacos...",
+
+"🔨 Colocando los últimos ladrillos...",
+
+"📏 Midiendo las habitaciones...",
+
+"🚪 Instalando las puertas...",
+
+"🪟 Poniendo las ventanas...",
+
+"🎨 Pintando las paredes...",
+
+"🧹 Limpiando el departamento...",
+
+"🐦 El ingeniero Palomas encontró otro detalle...",
+
+"😂 'Ahorita queda' - dijo el albañil.",
+
+"🏗️ Casi listo..."
+
+];
+
+const barra = document.querySelector(".progreso");
+const texto = document.getElementById("mensaje");
+
+let progreso = 0;
+let indice = 0;
+
+const tiempoTotal = 90000; // 90 segundos
+const intervaloBarra = tiempoTotal / 99;
+const intervaloTexto = tiempoTotal / mensajes.length;
+
+// Barra de progreso
+const cargar = setInterval(() => {
+
+    if(progreso < 99){
+
+        progreso++;
+        barra.style.width = progreso + "%";
+
+    }else{
+
+        clearInterval(cargar);
+
+        texto.innerHTML =
+        "🐦 El ingeniero Palomas detectó un último detalle...<br>⏳ Seguimos trabajando...";
+
+    }
+
+}, intervaloBarra);
+
+// Mensajes
+const cambiar = setInterval(() => {
+
+    indice++;
+
+    if(indice < mensajes.length){
+
+        texto.innerHTML = mensajes[indice];
+
+    }else{
+
+        clearInterval(cambiar);
+
+    }
+
+}, intervaloTexto);
+
+</script>
+
+</body>
+
+</html>
